@@ -12,4 +12,6 @@ pipeline {
                 sh 'docker run amnish90/app:1.1'
                 }
                }
+}
+{
                
