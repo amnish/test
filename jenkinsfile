@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        lable 'winodw_node'
+    }
     stages {
         stage('Pull the code') {
             steps {
