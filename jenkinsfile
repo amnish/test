@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Pull the code') {
             steps {
-                git branch: '', credentialsId: 'github3', url: 'https://github.com/amnish/test.git'
+                git branch: 'loginpage', credentialsId: 'github3', url: 'https://github.com/amnish/test.git'
                 }
                 }
         stage ('Build & push docker image') {
