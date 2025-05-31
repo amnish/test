@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Build & Push Docker Image') {
             steps {
-                sh 'docker build -t app .'
-                sh 'docker run app'
+                docker build -t app .
+                docker -d run app
             }
         }
     }
