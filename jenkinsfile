@@ -9,7 +9,7 @@ pipeline {
         stage('Build & Push Docker Image') {
             steps {
                 bat 'docker build -t app .'
-                bat 'docker -d run app'
+                bat 'docker run -d app'
             }
         }
     }
