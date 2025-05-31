@@ -8,8 +8,8 @@ pipeline {
                 }
         stage ('Build & push docker image') {
             steps {
-                  docker build -t amnish90/app:1.1 .
-                  docker run amnish90/app:1.1
+                  docker build -t app .
+                  docker run app
                 }
                }
 }
