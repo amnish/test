@@ -1,5 +1,5 @@
 FROM python:3
 WORKDIR /app
-RUN python --version
+RUN python3 --version
 COPY . .
 CMD ["Python3","hello.py"]
