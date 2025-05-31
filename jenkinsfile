@@ -3,15 +3,14 @@ pipeline {
     stages {
         stage('Pull the code') {
             steps {
-                git branch: 'loginpage', url: 'https://github.com/amnish/test.git'
-                }
-                }
-        stage ('Build & push docker image') {
+                git url: 'https://github.com/amnish/test.git', branch: 'loginpage'
+            }
+        }
+        stage('Build & Push Docker Image') {
             steps {
-                  docker build -t app .
-                  docker run app
-                }
-               }
+                sh 'docker build -t app .'
+                sh 'docker run app'
+            }
+        }
+    }
 }
-}
-               
