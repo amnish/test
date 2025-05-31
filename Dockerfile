@@ -2,4 +2,4 @@ FROM python:3
 WORKDIR /app
 RUN python3 --version
 COPY . .
-CMD ["Python3","hello.py"]
+CMD ["python3","hello.py"]
